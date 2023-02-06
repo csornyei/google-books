@@ -1,3 +1,4 @@
 pages/*.html
 public/*
 !public/.gitkeep
+.env

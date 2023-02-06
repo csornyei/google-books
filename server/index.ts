@@ -7,10 +7,10 @@ dotenv.config();
 
 const app = express();
 
-app.use("/public", express.static(path.join(__dirname, "./public")));
+app.use("/assets", express.static(path.join(__dirname, "./assets")));
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.sendFile(path.join(__dirname, "./pages/index.html"));
 });
 
 interface BookDataResponse {
