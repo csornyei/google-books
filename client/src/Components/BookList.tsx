@@ -14,6 +14,10 @@ interface BookListProps {
 }
 
 const BookList: React.FC<BookListProps> = ({ books }) => {
+  if (books.length === 0) {
+    return <p className="text-center">No books found</p>;
+  }
+
   return (
     <ul className="flex flex-col md:flex-row md:flex-wrap">
       {books.map((book) => (
